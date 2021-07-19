@@ -1,7 +1,7 @@
 import socket
 
 SERVER_IP = '192.168.122.129'
-SERVER_PORT = 4004
+SERVER_PORT = 5005
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 sock.bind((SERVER_IP, SERVER_PORT))
