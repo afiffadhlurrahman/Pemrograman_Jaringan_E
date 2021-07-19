@@ -20,11 +20,11 @@ def download_semua():
         if flag == 0:
             print("SERVER 1")
             # bagian ini merupakan bagian yang mengistruksikan eksekusi fungsi download gambar secara multithread
-            texec[k] = task.submit(send_image, IP_SERVER1, 4004, f"{k}.jpg")
+            texec[k] = task.submit(send_image, IP_SERVER1, 5005, f"{k}.jpg")
             flag += 1
         elif flag == 1:
             print("SERVER 2")
-            texec[k] = task.submit(send_image, IP_SERVER2, 4004, f"{k}.jpg")
+            texec[k] = task.submit(send_image, IP_SERVER2, 5005, f"{k}.jpg")
 
             # setelah menyelesaikan tugasnya, dikembalikan ke main thread dengan memanggil result
     for k in urls:
