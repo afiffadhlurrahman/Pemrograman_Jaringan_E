@@ -9,8 +9,8 @@ import socket
 def get_url_list():
     urls = dict()
     urls['kompas'] = 'https://asset.kompas.com/crops/qz_jJxyaZgGgboomdCEXsfbSpec=/0x0:998x665/740x500/data/photo/2020/03/01/5e5b52f4db896.jpg'
-    urls['its'] = 'https://www.its.ac.id/wp-content/uploads/2017/09/Gambar2111-1-1024x683.jpg'
-    # urls['detik'] = 'https://akcdn.detik.net.id/community/media/visual/2021/07/16/1307596016_169.jpg'
+    # urls['its'] = 'https://www.its.ac.id/wp-content/uploads/2017/09/Gambar2111-1-1024x683.jpg'
+    urls['detik'] = 'https://awscdn.detik.net.id/detik2/images/logo.jpg'
     # urls['file1'] = 'https://file-examples-com.github.io/uploads/2018/04/file_example_MOV_480_700kB.mov'
     # urls['file2']='https://file-examples-com.github.io/uploads/2018/04/file_example_MOV_1280_1_4MB.mov'
     # urls['file3'] = 'https://file-examples-com.github.io/uploads/2017/02/zip_2MB.zip'
