@@ -17,7 +17,7 @@ def get_url_list():
     return urls
 
 
-def download_gambar(url=None, tuliskefile=False):
+def download_gambar(url=None, tuliskefile='image'):
     waktu_awal = datetime.datetime.now()
     if (url is None):
         return False
