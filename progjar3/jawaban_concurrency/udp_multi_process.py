@@ -12,6 +12,7 @@ def download_semua():
     catat_awal = datetime.datetime.now()
     flag = 0
     for k in urls:
+        download_gambar(urls[k], k)
         print(f"mendownload {urls[k]}")
         waktu = time.time()
         if flag == 0:
