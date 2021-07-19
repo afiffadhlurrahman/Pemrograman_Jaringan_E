@@ -10,6 +10,7 @@ fp = open(filename, 'wb+')
 count = 0
 
 while True:
+    print("SERVER 2")
     data, addr = sock.recvfrom(1024)
     count += len(data)
     # buffer size 1024
