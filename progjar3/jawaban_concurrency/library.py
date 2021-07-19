@@ -42,8 +42,7 @@ def download_gambar(url=None, tuliskefile='image'):
             fp.close()
         waktu_process = datetime.datetime.now() - waktu_awal
         waktu_akhir = datetime.datetime.now()
-        logging.warning(
-            f"writing {namafile}.{ekstensi} dalam waktu {waktu_process} {waktu_awal} s/d {waktu_akhir}")
+        logging.warning(f"writing {namafile}.{ekstensi} dalam waktu {waktu_process} {waktu_awal} s/d {waktu_akhir}")
         return waktu_process
     else:
         return False
@@ -59,11 +58,10 @@ def send_image(IP_ADDRESS, PORT, filename):
     for i in file:
         file_bytes = bytes([i])
         sckclient.sendto(file_bytes, (IP_ADDRESS, PORT))
-        sent = sent+1
+        sent += 1
 
 
 if __name__ == '__main__':
     # check fungsi
-    k = download_gambar(
-        'https://asset.kompas.com/crops/qz_jJxyaZgGgboomdCEXsfbSpec=/0x0:998x665/740x500/data/photo/2020/03/01/5e5b52f4db896.jpg')
+    k = download_gambar('https://asset.kompas.com/crops/qz_jJxyaZgGgboomdCEXsfbSpec=/0x0:998x665/740x500/data/photo/2020/03/01/5e5b52f4db896.jpg')
     print(k)
