@@ -9,8 +9,8 @@ import socket
 def get_url_list():
     urls = dict()
     urls['kompas'] = 'https://asset.kompas.com/crops/qz_jJxyaZgGgboomdCEXsfbSpec=/0x0:998x665/740x500/data/photo/2020/03/01/5e5b52f4db896.jpg'
-    # urls['its'] = 'https://www.its.ac.id/wp-content/uploads/2017/09/Gambar2111-1-1024x683.jpg'
     urls['detik'] = 'https://awscdn.detik.net.id/detik2/images/logo.jpg'
+    # urls['its'] = 'https://www.its.ac.id/wp-content/uploads/2017/09/Gambar2111-1-1024x683.jpg'
     # urls['file1'] = 'https://file-examples-com.github.io/uploads/2018/04/file_example_MOV_480_700kB.mov'
     # urls['file2']='https://file-examples-com.github.io/uploads/2018/04/file_example_MOV_1280_1_4MB.mov'
     # urls['file3'] = 'https://file-examples-com.github.io/uploads/2017/02/zip_2MB.zip'
@@ -37,12 +37,13 @@ def download_gambar(url=None, tuliskefile='image'):
         namafile = os.path.basename(url)
         ekstensi = tipe[content_type]
         if (tuliskefile):
-            fp = open(f"{namafile}.{ekstensi}", "wb")
+            fp = open(f"{tuliskefile}.{ekstensi}", "wb")
             fp.write(ff.content)
             fp.close()
         waktu_process = datetime.datetime.now() - waktu_awal
         waktu_akhir = datetime.datetime.now()
-        logging.warning(f"writing {namafile}.{ekstensi} dalam waktu {waktu_process} {waktu_awal} s/d {waktu_akhir}")
+        logging.warning(
+            f"writing {tuliskefile}.{ekstensi} dalam waktu {waktu_process} {waktu_awal} s/d {waktu_akhir}")
         return waktu_process
     else:
         return False
@@ -63,5 +64,6 @@ def send_image(IP_ADDRESS, PORT, filename):
 
 if __name__ == '__main__':
     # check fungsi
-    k = download_gambar('https://asset.kompas.com/crops/qz_jJxyaZgGgboomdCEXsfbSpec=/0x0:998x665/740x500/data/photo/2020/03/01/5e5b52f4db896.jpg')
+    k = download_gambar(
+        'https://asset.kompas.com/crops/qz_jJxyaZgGgboomdCEXsfbSpec=/0x0:998x665/740x500/data/photo/2020/03/01/5e5b52f4db896.jpg')
     print(k)
