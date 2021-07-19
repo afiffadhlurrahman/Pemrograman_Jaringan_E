@@ -21,12 +21,12 @@ def download_semua():
         if flag == 0:
             print("SERVER 1")
             texec[k] = task_pool.apply_async(
-                func=send_image, args=(IP_SERVER1, 4004, f"{k}.jpg"))
+                func=send_image, args=(IP_SERVER1, 5005, f"{k}.jpg"))
             flag += 1
         elif flag == 1:
             print("SERVER 2")
             texec[k] = task_pool.apply_async(
-                func=send_image, args=(IP_SERVER2, 4004, f"{k}.jpg"))
+                func=send_image, args=(IP_SERVER2, 5005, f"{k}.jpg"))
     # setelah menyelesaikan tugasnya, dikembalikan ke main process dengan mengambil hasilnya dengan get
     for k in urls:
         status_task[k] = texec[k].get(timeout=10)
