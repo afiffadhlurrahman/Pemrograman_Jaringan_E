@@ -19,12 +19,12 @@ def download_semua():
             print("SERVER 1")
             # bagian ini merupakan bagian yang mengistruksikan eksekusi fungsi download gambar secara multithread
             texec[k] = threading.Thread(
-                target=send_image, args=(IP_SERVER1, 4004, f"{k}.jpg"))
+                target=send_image, args=(IP_SERVER1, 5005, f"{k}.jpg"))
             flag += 1
         elif flag == 1:
             print("SERVER 2")
             texec[k] = threading.Thread(
-                target=send_image, args=(IP_SERVER2, 4004, f"{k}.jpg"))
+                target=send_image, args=(IP_SERVER2, 5005, f"{k}.jpg"))
         texec[k].start()
 
     # setelah menyelesaikan tugasnya, dikembalikan ke main thread dengan join
